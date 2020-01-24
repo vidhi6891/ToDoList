@@ -8,5 +8,5 @@ const handleTodoCreate = jest.fn();
 
 test('renders todo form', () => {
   const todoForm  = render(<TodoForm todos={todos} handleTodoCreate={handleTodoCreate}/>);
-  todoForm.getByPlaceholderText("Enter new todo");
+  expect(todoForm).toMatchSnapshot();
 });
